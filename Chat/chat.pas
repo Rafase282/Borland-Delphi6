@@ -1,0 +1,55 @@
+unit chat;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Label3: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+uses gauge282, gauge;
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+if (edit1.text='Rafasé_282') and (edit2.Text='rafase') then
+form3.Show
+else
+showmessage('La Contraseña o Nombre de Usuario esta incorrecta');
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure TForm1.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+If Key= #13 Then
+Perform(wm_nextdlgctl,0,0);
+end;
+
+end.

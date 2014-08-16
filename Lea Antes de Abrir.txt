@@ -1,0 +1,2 @@
+Todos Los Programas Abren desde la Unidad "D" y no se pueden Sacar de la carpeta Delphi o los que tienen base de datos no abriran. 
+Gracias (R.282)

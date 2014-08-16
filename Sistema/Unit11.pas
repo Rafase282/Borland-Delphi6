@@ -1,0 +1,78 @@
+unit Unit11;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, StdCtrls, Buttons, Mask, DBCtrls, DB, DBTables,
+  MPlayer;
+
+type
+  TForm11 = class(TForm)
+    Panel1: TPanel;
+    MediaPlayer1: TMediaPlayer;
+    Panel2: TPanel;
+    Label1: TLabel;
+    Edit1: TEdit;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    Edit2: TEdit;
+    Label2: TLabel;
+    Table1: TTable;
+    Table1USUARIO: TStringField;
+    Table1CONTRASENA: TStringField;
+    DataSource1: TDataSource;
+    Image1: TImage;
+    Memo1: TMemo;
+    procedure BitBtn2Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form11: TForm11;
+
+implementation
+
+uses Unit9;
+
+{$R *.dfm}
+
+procedure TForm11.BitBtn2Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TForm11.BitBtn1Click(Sender: TObject);
+begin
+If Not Table1.Locate('USUARIO',Edit1.Text, []) Then
+Showmessage ('El Nombre de Usuario es Incorrecto')
+Else
+If Not Table1.Locate('CONTRASENA',Edit2.Text, []) Then
+ShowMessage ('La Clave del Usuario es Incorrecta')
+Else
+Form9.Show;
+end;
+
+procedure TForm11.FormActivate(Sender: TObject);
+begin
+MediaPlayer1.Filename:='D:\Delphi\Sistema\Beethoven.MP3';
+MediaPlayer1.Open;
+MediaPlayer1.Display:= Form11;
+MediaPlayer1.Displayrect:= Rect(10,10,625,250);
+MediaPlayer1.Play;
+
+end;
+
+procedure TForm11.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+If Key= #13 Then
+Perform(wm_nextdlgctl,0,0);
+end;
+
+end.

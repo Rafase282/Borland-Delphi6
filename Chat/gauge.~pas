@@ -1,0 +1,43 @@
+unit gauge;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm3 = class(TForm)
+    ListBox1: TListBox;
+    ListBox2: TListBox;
+    Edit1: TEdit;
+    Button1: TButton;
+    procedure FormActivate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+uses gauge282, chat;
+
+{$R *.dfm}
+
+procedure TForm3.FormActivate(Sender: TObject);
+begin
+Form1.hide;
+end;
+
+procedure TForm3.Button1Click(Sender: TObject);
+Var a : Integer;
+begin
+a:= strtoint(Edit1.Text);
+end;
+
+end.

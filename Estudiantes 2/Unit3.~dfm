@@ -1,0 +1,292 @@
+object Form3: TForm3
+  Left = 208
+  Top = 107
+  Width = 528
+  Height = 375
+  Caption = 'Imprimir'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Scaled = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object QuickRep1: TQuickRep
+    Left = 0
+    Top = 0
+    Width = 794
+    Height = 1123
+    Frame.Color = clBlack
+    Frame.DrawTop = False
+    Frame.DrawBottom = False
+    Frame.DrawLeft = False
+    Frame.DrawRight = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    Functions.Strings = (
+      'PAGENUMBER'
+      'COLUMNNUMBER'
+      'REPORTTITLE')
+    Functions.DATA = (
+      '0'
+      '0'
+      #39#39)
+    Options = [FirstPageHeader, LastPageFooter]
+    Page.Columns = 1
+    Page.Orientation = poPortrait
+    Page.PaperSize = A4
+    Page.Values = (
+      127
+      2970
+      127
+      2100
+      127
+      127
+      0)
+    PrinterSettings.Copies = 1
+    PrinterSettings.Duplex = False
+    PrinterSettings.FirstPage = 0
+    PrinterSettings.LastPage = 0
+    PrinterSettings.OutputBin = Auto
+    PrintIfEmpty = True
+    SnapToGrid = True
+    Units = Inches
+    Zoom = 100
+    object QRBand1: TQRBand
+      Left = 48
+      Top = 48
+      Width = 698
+      Height = 41
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      AlignToBottom = False
+      Color = clWhite
+      ForceNewColumn = False
+      ForceNewPage = False
+      Size.Values = (
+        108.479166666667
+        1846.79166666667)
+      BandType = rbTitle
+      object QRLabel1: TQRLabel
+        Left = 8
+        Top = 0
+        Width = 54
+        Height = 25
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          66.1458333333333
+          21.1666666666667
+          0
+          142.875)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Matricula'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel2: TQRLabel
+        Left = 104
+        Top = 0
+        Width = 47
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.9791666666667
+          275.166666666667
+          0
+          124.354166666667)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Apellido'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel3: TQRLabel
+        Left = 224
+        Top = 0
+        Width = 46
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.9791666666667
+          592.666666666667
+          0
+          121.708333333333)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Nombre'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+      object QRLabel4: TQRLabel
+        Left = 360
+        Top = 0
+        Width = 49
+        Height = 17
+        Frame.Color = clBlack
+        Frame.DrawTop = False
+        Frame.DrawBottom = False
+        Frame.DrawLeft = False
+        Frame.DrawRight = False
+        Size.Values = (
+          44.9791666666667
+          952.5
+          0
+          129.645833333333)
+        Alignment = taLeftJustify
+        AlignToBand = False
+        AutoSize = True
+        AutoStretch = False
+        Caption = 'Telefono'
+        Color = clWhite
+        Transparent = False
+        WordWrap = True
+        FontSize = 10
+      end
+    end
+    object QRDBText1: TQRDBText
+      Left = 56
+      Top = 96
+      Width = 74
+      Height = 25
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        66.1458333333333
+        148.166666666667
+        254
+        195.791666666667)
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = True
+      AutoStretch = False
+      Color = clWhite
+      DataSet = Table1
+      DataField = 'MATRICULA'
+      Transparent = False
+      WordWrap = True
+      FontSize = 10
+    end
+    object QRDBText2: TQRDBText
+      Left = 160
+      Top = 96
+      Width = 64
+      Height = 25
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        66.1458333333333
+        423.333333333333
+        254
+        169.333333333333)
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = True
+      AutoStretch = False
+      Color = clWhite
+      DataSet = Table1
+      DataField = 'APELLIDO'
+      Transparent = False
+      WordWrap = True
+      FontSize = 10
+    end
+    object QRDBText4: TQRDBText
+      Left = 408
+      Top = 96
+      Width = 70
+      Height = 25
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        66.1458333333333
+        1079.5
+        254
+        185.208333333333)
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = True
+      AutoStretch = False
+      Color = clWhite
+      DataSet = Table1
+      DataField = 'TELEFONO'
+      Transparent = False
+      WordWrap = True
+      FontSize = 10
+    end
+    object QRDBText3: TQRDBText
+      Left = 272
+      Top = 96
+      Width = 58
+      Height = 17
+      Frame.Color = clBlack
+      Frame.DrawTop = False
+      Frame.DrawBottom = False
+      Frame.DrawLeft = False
+      Frame.DrawRight = False
+      Size.Values = (
+        44.9791666666667
+        719.666666666667
+        254
+        153.458333333333)
+      Alignment = taLeftJustify
+      AlignToBand = False
+      AutoSize = True
+      AutoStretch = False
+      Color = clWhite
+      DataSet = Table1
+      DataField = 'NOMBRE'
+      Transparent = False
+      WordWrap = True
+      FontSize = 10
+    end
+  end
+  object Table1: TTable
+    Active = True
+    DatabaseName = 'H:\Estudiantes 2'
+    SessionName = 'Default'
+    TableName = 'Estudiantes2.dbf'
+    Left = 48
+  end
+end

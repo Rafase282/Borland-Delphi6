@@ -1,0 +1,63 @@
+unit Unit3;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ExtCtrls, StdCtrls, Mask, DBCtrls, DB, DBTables, Buttons;
+
+type
+  TForm3 = class(TForm)
+    Panel1: TPanel;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
+    Table1: TTable;
+    DataSource1: TDataSource;
+    Table1USUARIO: TStringField;
+    Table1CONTRASENA: TStringField;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    procedure BitBtn2Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+uses Unit1;
+
+{$R *.dfm}
+
+procedure TForm3.BitBtn2Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TForm3.BitBtn1Click(Sender: TObject);
+begin
+If Not Table1.Locate('USUARIO',Edit1.Text, []) Then
+Showmessage ('El Nombre de Usuario es Incorrecto')
+Else
+If Not Table1.Locate('CONTRASENA',Edit2.Text, []) Then
+ShowMessage ('La Clave del Usuario es Incorrecta')
+Else
+Form1.Show;
+end;
+
+procedure TForm3.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+If Key= #13 Then
+Perform(wm_nextdlgctl,0,0);
+end;
+
+end.
